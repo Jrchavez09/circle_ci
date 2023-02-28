@@ -17,10 +17,11 @@ jobs:
       - run:
           name: "running tests"
           command: |
-            virtualenv venv
-            . venv/bin/activate
-            pip3.11 install -r requirements.txt
-            python3.11 -m pytest tests
+            make test
+          #virtualenv venv
+# . venv/bin/activate
+#           pip3.11 install -r requirements.txt
+#           python3.11 -m pytest tests
             
 
 # Invoke jobs via workflows
