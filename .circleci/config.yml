@@ -17,10 +17,11 @@ jobs:
       - run:
           name: "running tests"
           command: |
-            make test
-          # pip3.11 install -r requirements.txt
-          # python3.11 -m pytest tests
-          
+            virtualenv venv
+            source /venv/bin/activate
+            pip3.11 install -r requirements.txt
+            python3.11 -m pytest tests
+            
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
